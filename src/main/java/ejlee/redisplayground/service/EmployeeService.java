@@ -13,7 +13,11 @@ public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
 
-    public List<Employee> findAllEmployee() {
+    public Iterable<Employee> findAllEmployee() {
         return employeeRepository.findAll();
+    }
+
+    public Employee saveEmployee(Employee employee) {
+        return employeeRepository.save(employee);
     }
 }
