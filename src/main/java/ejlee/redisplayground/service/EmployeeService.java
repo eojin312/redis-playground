@@ -5,8 +5,6 @@ import ejlee.redisplayground.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 @RequiredArgsConstructor
 public class EmployeeService {
@@ -18,6 +16,7 @@ public class EmployeeService {
     }
 
     public Employee saveEmployee(Employee employee) {
-        return employeeRepository.save(employee);
+        Employee save = employeeRepository.save(employee);
+        return save;
     }
 }

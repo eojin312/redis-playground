@@ -25,3 +25,6 @@ spring:
             descriptor:
               sql:
                 BasicBinder: TRACE
+
+  main:
+    allow-bean-definition-overriding: true
